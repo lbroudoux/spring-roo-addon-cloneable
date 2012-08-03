@@ -1,0 +1,18 @@
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-08-02 17:00:44
+project --topLevelPackage com.github.lbroudoux.roo.addon.cloneable --projectName addon-cloneable-test --java 6 --packaging JAR
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-08-02 17:00:46
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-08-02 17:01:00
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-08-02 17:02:12
+jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
+entity jpa --class ~.domain.Tweet
+test integration
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-08-02 17:06:56
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-08-02 17:07:24
+osgi ps
+osgi start --url file:///home/laurent/dev/repository/com/github/lbroudoux/roo/addon/com.github.lbroudoux.roo.addon.cloneable/0.1.0.BUILD-SNAPSHOT/com.github.lbroudoux.roo.addon.cloneable-0.1.0.BUILD-SNAPSHOT.jar
+cloneable add --type ~.domain.Tweet --fetch lazy
+osgi update --bundleSymbolicName com.github.lbroudoux.roo.addon.cloneable
+cloneable add --type ~.domain.Tweet --fetch lazy
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-08-03 12:11:07
